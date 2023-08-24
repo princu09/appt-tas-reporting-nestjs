@@ -1,0 +1,25 @@
+{
+  "name": "flytt-portal",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bundle/bundle.js",
+  "module": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:stage": "BUILD=stage lerna run docker:build --stream",
+    "push:stage": "BUILD=stage lerna run docker:push --stream"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/flytt/flytt-portal.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/flytt/flytt-portal#readme",
+  "devDependencies": {
+    "lerna": "^4.0.0"
+  },
+  "dependencies": {
+    "socket.io-redis": "^6.1.1"
+  }
+}

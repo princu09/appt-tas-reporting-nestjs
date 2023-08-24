@@ -1,0 +1,35 @@
+version: '3'
+
+
+services:
+  nest:
+    build:
+      context: .
+      target: build
+    restart: always
+    security_opt:
+     - no-new-privileges:true
+    cap_drop:
+      - ALL
+    depends_on:
+      - postgres
+      - redis
+    env_file:
+      - ./test-env
+    environment:
+      GOOGLE_APPLICATION_CREDENTIALS: /home/node/firebase_token.json
+    volumes:
+      - ./test-firebase.json:/home/node/firebase_token.json # static bind so always read only
+    ports:
+      - 127.0.0.1:1337:3000
+  postgres:
+    image: postgres
+    restart: always
+    ports:
+      - 127.0.0.1:5555:5432
+    environment:
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_USER: postgres
+  redis:
+    image: redis
+    restart: always

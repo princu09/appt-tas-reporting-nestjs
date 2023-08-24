@@ -1,0 +1,13 @@
+{
+  "apps": [
+    {
+      "name": "flytt-nest",
+      "script": "dist/main.js",
+      "instances": 1,
+      "exec_mode": "cluster_mode",
+      "merge_logs": true,
+      "time": true,
+      "exp_backoff_restart_delay": 100
+    }
+  ]
+}

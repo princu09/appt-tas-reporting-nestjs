@@ -1,0 +1,37 @@
+version: '3'
+
+
+services:
+  nest:
+    build:
+      context: ./appt-nest/
+      target: build
+    restart: always
+    security_opt:
+     - no-new-privileges:true
+    cap_drop:
+      - ALL
+    depends_on:
+      - postgres
+      - redis
+    env_file:
+      - ./appt-nest/test-env
+    environment:
+      GOOGLE_APPLICATION_CREDENTIALS: /home/node/firebase_token.json
+    volumes:
+      - ./appt-nest/test-firebase.json:/home/node/firebase_token.json # static bind so always read only
+    ports:
+      - 127.0.0.1:1337:3000
+  postgres:
+    container_name: flytt-frontend-api-db
+    image: postgres
+    restart: always
+    ports:
+      - 127.0.0.1:5555:5432
+    environment:
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_DB: test_db
+  redis:
+    image: redis
+    restart: always

@@ -1,0 +1,76 @@
+########################
+# environment
+########################
+.env*
+!.env.dist
+
+########################
+# generated
+########################
+www/
+bower_components/
+
+########################
+# testing
+########################
+coverage/
+.nyc_output/
+
+########################
+# sails
+########################
+.sails
+.waterline
+.rigging
+.tmp
+
+
+########################
+# node.js / npm
+########################
+lib-cov
+*.seed
+*.log
+*.csv
+*.dat
+*.out
+*.pid
+*.gz
+
+pids
+logs
+results
+
+data/
+node_modules/
+assets/bower/
+npm-debug.log
+attachments/
+cache/*
+
+########################
+# image detection
+########################
+python/training-data/*
+python/classifier.pkl
+
+########################
+# misc / editors
+########################
+*~
+*#
+.DS_STORE
+.netbeans
+nbproject
+.idea
+*.sublime-workspace
+
+
+########################
+# local config
+########################
+config/local.js
+docker/local-db/*
+!docker/local-db/.gitkeep
+docker/local-redis/*
+!docker/local-redis/.gitkeep

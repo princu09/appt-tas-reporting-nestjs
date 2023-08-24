@@ -1,0 +1,4 @@
+
+> appt-nest@0.0.1 test:e2e
+> NODE_ENV=test jest --runInBand --config ./test/jest-e2e.json test/e2e/crud-test/crud-user-test.e2e-spec.ts
+

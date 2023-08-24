@@ -1,0 +1,13 @@
+{
+  "name": "@appt-digital/appt-nest-types",
+  "version": "1.0.19",
+  "description": "",
+  "typings": "index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "types": "./index.d.ts",
+  "dependencies": {}
+}

@@ -1,0 +1,35 @@
+To Test-
+
+docker compose -f docker-compose.test.yml up
+npm test
+
+
+Apis that need doing -
+
+=====/////Create client screen - REQ 5-9 - https://dev-api-transatlantic.ontheappt.cloud/api/#/default/OrganisationController_transAtNewOrg
+======\\\\\app users - REQ 5-4 - https://dev-api-transatlantic.ontheappt.cloud/api/#/default/getManyBaseUserControllerUser
+
+DYNAMIC FORMS
+  =====/////Safety Observations form - https://dev-api-transatlantic.ontheappt.cloud/api/#/default/getManyBaseContractorDataReportControllerContractorDataReport
+  ====////Flash incident form - https://dev-api-transatlantic.ontheappt.cloud/api/#/default/IncidentFlashReportController_uploadFile
+  =======//////contractor report - https://dev-api-transatlantic.ontheappt.cloud/api/#/default/getOneBaseContractorDataReportControllerContractorDataReport
+
+======\\\\\Users - REQ 5-4 - https://dev-api-transatlantic.ontheappt.cloud/api/#/default/getManyBaseUserControllerUser
+  - Get users where `type = appUser`
+
+
+====////- update a user - https://dev-api-transatlantic.ontheappt.cloud/api/#/default/updateOneBaseUserControllerUser
+====//// - create appUser - https://dev-api-transatlantic.ontheappt.cloud/api/#/default/TransAtUserController_signup
+=====\\\\- create adminUser - https://dev-api-transatlantic.ontheappt.cloud/api/#/default/TransAtUserController_newAdmin
+===\\\\ - create kpiUser - https://dev-api-transatlantic.ontheappt.cloud/api/#/default/TransAtUserController_newKPI
+
+=====////Organisations - REQ 5-8 - https://dev-api-transatlantic.ontheappt.cloud/api/#/default/getManyBaseOrganisationControllerOrganisation
+Client editing - REQ 5-9 - https://dev-api-transatlantic.ontheappt.cloud/api/#/default/updateOneBaseOrganisationControllerOrganisation
+
+contractor crud - https://dev-api-transatlantic.ontheappt.cloud/api/#/default/getOneBaseOrganisationContractorControllerOrganisationContractor
+area crud - https://dev-api-transatlantic.ontheappt.cloud/api/#/default/getOneBaseAreaControllerArea
+remove kpi users - https://dev-api-transatlantic.ontheappt.cloud/api/#/default/deleteOneBaseRoleuserControllerRoleuser
+
+
+AUTHENTICATION -
+////// passwordreset - https://dev-api-transatlantic.ontheappt.cloud/api/#/default/AuthenticationController_passwordResetRequest

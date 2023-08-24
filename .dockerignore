@@ -1,0 +1,60 @@
+# npm
+node_modules
+.env*
+
+bower_componentsOLD
+
+# app cache files
+cache
+www
+.tmp
+
+# development files
+documentation
+data
+.git
+*.log
+.DS_STORE
+dist/
+
+# config files
+cert
+Dockerfile*
+docker-compose*
+.dockerignore
+.gitignore
+README.md
+LICENSE
+.vscode
+bitbucket-pipelines.yml
+ecosystem-*.json
+todo.md
+Procfile
+
+# clean bower folder - we're going to drop bower soon
+assets/*/*.json
+assets/*/*.md
+assets/*/*.yaml
+assets/*/*.scss
+assets/*/*.rb
+assets/*/*.ru
+assets/*/*.lock
+assets/*/*.yml
+assets/*/*.txt
+assets/*/*.sh
+assets/*/*.mkd
+assets/*/*.LICENCE
+
+assets/*/Gruntfile.js
+assets/*/Gemfile
+assets/*/.gitignore
+assets/*/.npmignore
+assets/*/LICENCE
+assets/*/TODO
+assets/*/VERSION
+
+assets/*/build/*
+assets/*/src/*
+assets/*/docs/*
+assets/*/tasks/*
+

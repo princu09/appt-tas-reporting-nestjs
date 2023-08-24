@@ -1,0 +1,4 @@
+[submodule "hosting"]
+	path = hosting
+	url = git@bitbucket.org:appt/flytt-hosting.git
+	 branch = master

@@ -1,0 +1,5 @@
+addressLine1,addressLine2,postCode,city,cost_pppw,bedroomCount,briefDescription,fullDescription,agentContactNumber,holdingFee,isLive,billsIncluded,reserved,contractLength,availableFrom,keyFeatures,name,locationSummary,latitude,longitude,floorplanURL,videoURL,epcURL
+addressLine1, addressLine2, postcode, city, 123.00, 4, desc, fulldesc, 01142222222,100.23,false,false,false,100,"2020-07-10 15:00:00","[""doors"", ""windows""]", pad, earth,,,,,,
+addressLine1, addressLine2, postcode, city, 123.00, 4, desc, fulldesc, 01142222222,100.23,false,false,false,100,"2020-07-10 15:00:00","[""doors"", ""windows""]", pad, earth,,,,,,
+addressLine1, addressLine2, postcode, city, 123.00, 4, desc, fulldesc, 01142222222,100.23,false,false,false,100,"2020-07-10 15:00:00",1, pad, earth,,,,,,
+addressLine1, addressLine2, postcode, 6, 123.00, 4, desc, fulldesc, 01142222222,100.23,false,false,false,100,,"[""doors"", ""windows""]", pad, earth,,,,,,

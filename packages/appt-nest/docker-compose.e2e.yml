@@ -1,0 +1,41 @@
+version: '3'
+services:
+  nest:
+    build:
+      context: .
+      target: build
+    environment:
+      MYSQL_HOST: mariadb
+      MYSQL_USERNAME: root
+      MYSQL_PASSWORD: root
+      MYSQL_PORT: 3306
+      MYSQL_DATABASE: e2etestdb
+      TWILIO_ACCOUNT_SID: ACadf6f82be15ed9fbc68e396c8e80e1a0
+      TWILIO_AUTH_TOKEN: 74d855befbb00cd11263d3e0fd748bc1
+      TWILIO_MESSAGING_SID: MGa40de5812f015289dc5a67aa96c80d08
+      SENDGRID_KEY: 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
+      GOOGLE_APPLICATION_CREDENTIALS:
+      NOTIFICATION_FROM_EMAIL: test@appt.digital
+    depends_on:
+      - mariadb
+    volumes:
+      - ./:/app
+      - /app/node_modules
+    working_dir: /app
+    command: npm run test:e2e
+    networks:
+      - nete2e
+  mariadb:
+    image: mariadb:10.5
+    restart: always
+    command: --init-file /data/application/init.sql
+    volumes:
+      - ./test/init/init.sql:/data/application/init.sql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: e2etestdb
+    networks:
+      - nete2e
+
+networks:
+  nete2e:
